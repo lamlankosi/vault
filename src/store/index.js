@@ -22,7 +22,7 @@ export default createStore({
   actions: {
     async fetchData(context){
       try{
-        const res =  await axios.get(`${apiURL}/data`)
+        const res =  await axios.get(`${apiURL}data`)
           const {results, msg} = res.data
           if(results) {
             context.commit('setData', results)
@@ -33,12 +33,14 @@ export default createStore({
             })
           }
       } catch(e){
+        // Log the full error for debugging
         toast.error(`${e.message}`, {
           autoClose: 2000,
           position: toast.POSITION.TOP_CENTER
-        })
-
+        });
+        
       }
+      
       
   },
   async fetchInfo(context, id){
@@ -88,6 +90,8 @@ export default createStore({
           autoClose:3000,
           position: toast.POSITION.TOP_CENTER
         })
+        console.log(msg);
+        
       }
     }catch(e){
       toast.error(`${e.message}`, {
