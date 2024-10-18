@@ -2,9 +2,8 @@
   <div class="home">
     <div class="header">
       <button class="btn btn-primary" @click="showLogin = true">Login</button>
-      
     </div>
-
+    <router-link to="/info" style="background-color: black;">jnj  <i class="bi bi-eye-fill"></i></router-link>
   </div>
 </template>
 

@@ -21,7 +21,8 @@
                     <td>{{ info.Password }}</td>
                     <td>
                         <button class="btn btn-secondary"><i class="bi bi-pencil"></i></button>
-                        <button class="btn btn-secondary" @click="deleteData(data.ID)"><i class="bi bi-trash2"></i></button>
+                        <button class="btn btn-secondary" @click="deleteData(info.ID)"><i class="bi bi-trash2"></i></button>
+
                     </td>
                 </tr>
             </tbody>

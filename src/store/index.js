@@ -75,6 +75,7 @@ export default createStore({
       }
     } catch(e){
       toast.error(`${e.message}`,{
+        theme: 'dark',
         autoClose: 3000,
         position: toast.POSITION.TOP_CENTER
       })
