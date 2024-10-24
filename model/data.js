@@ -74,7 +74,7 @@ class Data{
                 if(err){
                     res.json({
                         status: res.statusCode,
-                        msg: 'Failed to add try again'
+                        msg: e.message
                     })
                 } else {
                     res.json({
